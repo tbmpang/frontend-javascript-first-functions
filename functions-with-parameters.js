@@ -16,7 +16,11 @@ console.log(result);
 // ---- Verwachte uitkomsten:
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
-
+function greeter(personName) {
+  return "Hoi" + personName;
+}
+const greet = greeter(" Jan!");
+console.log(greet);
 
 
 /* Opdracht 2 */
@@ -26,16 +30,23 @@ console.log(result);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(minutes) {
+  return minutes * 60;
+}
 
-
+const getNumber = minutesToSeconds(1);
+console.log(getNumber)
 /* Opdracht 3 */
 // Schrijf een functie genaamd merge, die twee strings verwacht en deze aan elkaar geplakt teruggeeft.
 // Let op: je mag hier geen String methoden voor gebruiken zoals concat().
 // ---- Verwachte uitkomsten:
 // merge("abra", "cadabra") geeft "abracadabra"
 // merge("zoet", "sappig") geeft "zoetsappig"
-
-
+function merge(firstWord, lastWord) {
+  return firstWord + lastWord
+}
+const combineWords = merge("abra", "cadabra");
+console.log(combineWords);
 
 
 /* Opdracht  4 */
@@ -43,9 +54,12 @@ console.log(result);
 // ---- Verwachte uitkomsten:
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
+function calculateDogYears(humanAge) {
+  return "Jouw hond is " + humanAge * 7 + " jaar oud in mensenjaren."
+}
 
-
-
+const dogAge = calculateDogYears(6)
+console.log(dogAge)
 /* Opdracht 5 */
 // Schrijf een functie genaamd wrapper, die twee parameters verwacht: een woord en een karakter
 // De functie omwikkelt het woord met het karakter en geeft dit terug
@@ -54,8 +68,11 @@ console.log(result);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
-
-
+function wrapper(word, character) {
+  return character + word + character;
+}
+const outcome = wrapper("bril","*");
+console.log(outcome);
 /* Bonus opdracht  */
 // Schrijf een functie genaamd createDetailString, die een object met de properties firstName, lastName en profession verwacht en een zin teruggeeft
 // ---- Verwachte uitkomsten:
